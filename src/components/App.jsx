@@ -1,19 +1,30 @@
 'use strict';
-class App extends React.Component {
+import React from 'React';
+import Layout from './Layout.jsx';
+import {messages} from '../data/messages.js';
+export default class App extends React.Component {
   constructor(props) {
     super(props);
-
     this.state = {
-      liftMessage: "This is an inspirational message.",
+      liftMessage: 'The light is in sight. Click the "Lift Me Up" button to smile.',
       writeMessage: "Feeling the love? Spread it to a random soul!"
     };
+  }
+
+  getRandomMessage() {
+    this.setState({
+      liftMessage: messages[Math.floor(Math.random() * messages.length)]
+    });
   }
 
   render() {
     return (
       <div className="col-md-12">
-        <Nav/>
-        <Layout liftMessage={this.state.liftMessage} writeMessage={this.state.writeMessage}/>
+        <Layout
+          liftMessage={this.state.liftMessage}
+          getRandomMessage={this.getRandomMessage.bind(this)}
+          writeMessage={this.state.writeMessage}
+          />
       </div>
     );
   }

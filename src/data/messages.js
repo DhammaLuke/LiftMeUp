@@ -1,0 +1,6 @@
+'use strict';
+const messages = [
+  "Pain is the antithesis of conscious living. Only a wanderer of the totality may harmonize this wellspring of transformation. Yes, it is possible to exterminate the things that can eradicate us, but not without stardust on our side.", "Have you found your quest? Although you may not realize it, you are unified. How should you navigate this quantum universe?", "We dream, we heal, we are reborn. Consciousness consists of ultra-sentient particles of quantum energy. “Quantum” means a deepening of the unlimited. This life is nothing short of an evolving oasis of divine peace.", "Where there is discontinuity, potentiality cannot thrive. Without wonder, one cannot dream. You may be ruled by selfishness without realizing it. Do not let it shatter the healing of your mission.", "Yes, it is possible to eliminate the things that can extinguish us, but not without nature on our side. Yearning is born in the gap where growth has been excluded. You must take a stand against greed.", "We can no longer afford to live with bondage. The complexity of the present time seems to demand an unfolding of our lives if we are going to survive. Delusion is the antithesis of life-force."
+]
+
+export {messages}
