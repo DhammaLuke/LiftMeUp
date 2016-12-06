@@ -6,8 +6,7 @@ export default class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      liftMessage: 'The light is in sight. Click the "Lift Me Up" button to smile.',
-      writeMessage: "Feeling the love? Spread it to a random soul!"
+      liftMessage: 'The light is in sight. Click the "Lift Me Up" button to smile.'
     };
   }
 
@@ -23,7 +22,6 @@ export default class App extends React.Component {
         <Layout
           liftMessage={this.state.liftMessage}
           getRandomMessage={this.getRandomMessage.bind(this)}
-          writeMessage={this.state.writeMessage}
           />
       </div>
     );

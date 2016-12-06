@@ -18,7 +18,7 @@ export default class Layout extends React.Component {
           />
       </div>
       <div className="col-md-6">
-        <SendLove writeMessage={this.props.writeMessage}/>
+        <SendLove />
       </div>
       </div>
     )

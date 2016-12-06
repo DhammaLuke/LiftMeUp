@@ -17,7 +17,9 @@
   },
   "homepage": "https://github.com/DhammaLuke/LiftMeUp#readme",
   "dependencies": {
+    "body-parser": "^1.15.2",
     "express": "^4.14.0",
+    "mongoose": "^4.7.1",
     "react": "^15.4.1",
     "react-dom": "^15.4.1"
   },
