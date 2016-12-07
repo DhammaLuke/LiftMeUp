@@ -37,15 +37,14 @@ export default class SendLove extends React.Component {
     //     console.log("Error" + data );
     //   }
     // });
-  fetch('/api/messages', {
-    method: 'POST',
-    headers: {
-    'Content-Type': 'application/json'
-    },
-    body: JSON.stringify({
-      text: this.state.value
+    fetch('/api/messages', {
+      method: 'POST',
+      headers: {
+      'Content-Type': 'application/json'
+      },
+    }).then(function(data) {
+      return data.text;
     })
-  });
     // console.log('A message has been submitted.');
     this.setState({value: 'Thank you for spreading the love! <3'});
     event.preventDefault();

@@ -42,7 +42,7 @@ router.get('/', function(req, res) {
 router.route('/messages')
   .post(function(req, res) {
     var message = new Message();
-    console.log(req.body.text);
+    console.log(req.body);
     message.text = req.body.text;
     message.save(function(err) {
       if(err) {
@@ -56,7 +56,8 @@ router.route('/messages')
       if(err) {
         res.send(err);
       }
-      res.json(messages);
+      console.log(messages[Math.floor(Math.random() * messages.length)].text);
+      res.json(messages[Math.floor(Math.random() * messages.length)]);
     })
   });
 
