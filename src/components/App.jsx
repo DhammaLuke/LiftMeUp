@@ -12,14 +12,7 @@ export default class App extends React.Component {
 
   getRandomMessage() {
     this.setState({
-      liftMessage: fetch('/messages', {
-        method: 'Get',
-        headers: {
-        'Content-Type': 'application/json'
-        }
-      }).then(function(data) {
-        console.log(data)
-      })
+      liftMessage: messages[Math.floor(Math.random() * messages.length)]
     });
   }
 
