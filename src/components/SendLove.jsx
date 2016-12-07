@@ -1,6 +1,7 @@
 'use strict';
 import React from 'React';
 import {messages} from '../data/messages';
+// import submitMessage from '../../server/messageController.js';
 
 export default class SendLove extends React.Component {
   constructor(props) {
@@ -18,9 +19,35 @@ export default class SendLove extends React.Component {
   }
 
   handleSubmit(event) {
+    console.log(this.state.value);
+    // $.post("http://localhost:1337/api/messages/", {
+    //   "text": this.state.value
+    // }, function() {
+    //   console.log("A message has been submitted");
+    // });
+    // $.ajax({
+    //   type: 'POST',
+    //   url: "http://localhost:1337/api/messages/",
+    //   contentType: 'application/json',
+    //   data: { "text": this.state.value },
+    //   success: function(data) {
+    //     console.log("A Message has been submitted: " + data);
+    //   },
+    //   error: function(data) {
+    //     console.log("Error" + data );
+    //   }
+    // });
+  fetch('/api/messages', {
+    method: 'POST',
+    headers: {
+    'Content-Type': 'application/json'
+    },
+    body: JSON.stringify({
+      text: this.state.value
+    })
+  });
+    // console.log('A message has been submitted.');
     this.setState({value: 'Thank you for spreading the love! <3'});
-    messages.push('Blarghargharghargh');
-    console.log('A message has been submitted.');
     event.preventDefault();
   }
 

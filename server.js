@@ -42,6 +42,7 @@ router.get('/', function(req, res) {
 router.route('/messages')
   .post(function(req, res) {
     var message = new Message();
+    console.log(req.body.text);
     message.text = req.body.text;
     message.save(function(err) {
       if(err) {
