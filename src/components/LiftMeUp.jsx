@@ -13,7 +13,7 @@ export default class LiftMeUp extends React.Component {
         <div className="liftMeUpBody">
           {this.props.liftMessage}
         </div>
-        <button type="button" className="btn btn-primary" onClick={this.props.getRandomMessage}>Lift Me Up</button>
+        <button type="button" id="liftBtn" className="btn btn-primary" onClick={this.props.getRandomMessage}>Lift Me Up</button>
       </div>
     )
   }

@@ -37,14 +37,15 @@ export default class SendLove extends React.Component {
     //     console.log("Error" + data );
     //   }
     // });
-    fetch('/api/messages', {
-      method: 'POST',
-      headers: {
-      'Content-Type': 'application/json'
-      },
-    }).then(function(data) {
-      return data.text;
+  fetch('/messages', {
+    method: 'POST',
+    headers: {
+    'Content-Type': 'application/json'
+    },
+    body: JSON.stringify({
+      text: this.state.value
     })
+  });
     // console.log('A message has been submitted.');
     this.setState({value: 'Thank you for spreading the love! <3'});
     event.preventDefault();
@@ -55,7 +56,7 @@ export default class SendLove extends React.Component {
       <div className="sendLoveBody">
         <form name="sendLoveForm" onSubmit={this.handleSubmit}>
           <textarea name="sendLove" rows="10" cols="50" value={this.state.value} onChange={this.handleChange} required/>
-          <button type="submit" className="btn btn-primary">Send Love!</button>
+          <button type="submit" id="loveBtn" className="btn btn-primary">Send Love!</button>
         </form>
       </div>
     )
